@@ -1,0 +1,423 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    width: 1600px;
+    margin: 0 auto;
+    font-family: Monserrat, sans-serif;
+    font-weight: 400;
+  }
+
+  .cover { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 919px;
+    margin: 80px auto;
+    gap: 80px;
+  }
+
+  .cover_logo {
+    width: 405px;
+    height: 374px;
+  }
+
+  .cover_title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px; 
+    text-align: center;
+    color: #000000;
+  }
+  
+  .card-list {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 180px auto; 
+    flex-wrap: wrap;
+    gap: 70px 40px;
+    align-content: space-between;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    width: 373px;
+    margin: 0 auto;
+  }
+
+  .card_text {
+    font-size: 14px;
+    line-height: 25.9px;
+    text-align: center;
+    color: #292929;
+  }
+
+  .scheme {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 180px auto;
+    gap: 30.4px;
+  }
+
+  .scheme_text {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px; 
+    color: #000000;
+  }
+
+  .advantages-second {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 180px auto;
+    gap: 30px;
+  }
+
+  .advantages-second_title {
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+  }
+
+  .advantages-second_card-list {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 43px 40px;
+    align-content: space-between;
+  }
+
+  .advantages-second_card {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+    width: 373px;
+    margin: 0 auto;
+  }
+
+  .advantages-second_card-title {
+    font-size: 18px;
+    line-height: 29px;
+    color: #292929;
+  }
+
+  .advantages-second_card-text {
+    font-size: 14px;
+    line-height: 25.9px;
+    color: #292929;
+  }
+
+  .delivery-set {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+
+  .h2_title {
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 41.45px;
+    color: #2B4C80;
+  }
+
+  .delivery-set_table {
+    border: 1px solid #CBCBCB;
+    border-radius: 43px;
+    padding: 15px;
+  }
+
+  .delivery-set_table_title {
+    font-size: 46px;
+    font-weight: 300;
+    line-height: 56px;
+    text-align: center;
+    color: #2B4C80;
+    margin-bottom: 20px;
+  }
+
+  .delivery-set_card-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    list-style-type: none;
+  }
+
+  .delivery-set_card-table {
+    background-color: #F5F5F5;
+    border-radius: 40px;
+    font-size: 14px;
+    line-height: 25.9px;
+    color: #292929;
+  }
+
+  .delivery-set_mini-card {
+    background-color: #2B4C80;
+    color: #FFFFFF;
+    padding: 25px;
+    border-radius: 40px;
+    height: 141px;
+  }
+  
+  .delivery-set_mini-card_title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 26.82px;
+  }
+
+  .text-big {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .card-table_title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    text-align: center;
+    padding: 8px 0;
+  }
+
+  .card-table_text {
+    font-size: 14px;
+    font-weight: 400;
+    color: #292929;
+    list-style-type: disc;
+  }
+
+  .bottom-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5% 5% 10%;
+  }
+
+  .button-for-consultation {
+    margin: 40px auto;
+    padding: 15px;
+    width: 374px;
+    background-color: #2B4C80;
+    color: #FFFFFF;
+    font-family: Monserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .main-functions {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 180px auto;
+    gap: 30px;
+  }
+
+  .text_bold {
+    font-weight: 600;
+  }
+
+  .octopus-gallery {
+    max-width: 1200px;
+    margin: 0  auto ;
+    margin-bottom: 60px;
+  }
+
+  .octopus_slider-conteiner {
+    position: relative;
+    width: 1200px;
+    height: 679px;
+    margin: 30px 0;
+    overflow: hidden;
+    touch-action: pan-y; /*Чтобы запретить скролл страницы, если мы начали двигать слайдер по оси X для сенсорных экранов*/
+  }
+
+  .octopus_slaider-img {
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* задаем изображениям , чтобы они не перетаскивались мышью */
+  }
+
+  .octopus_slaider {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  .prev-button,
+  .next-button {
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    font-size: 24px;
+    font-weight: 400;
+    cursor: pointer; /* меняем вид курсора*/
+  }
+
+  .octopus_slider-conteiner-two {
+    position: relative;
+    width: 780px;
+    height: 491px;
+    margin: 30px 0;
+    overflow: hidden;
+    touch-action: pan-y; /*Чтобы запретить скролл страницы, если мы начали двигать слайдер по оси X для сенсорных экранов*/
+  }
+
+  .advantages-second_title.newtitle {
+    margin-top: 120px;
+  }
+
+  .feedback-form {
+    display: flex; 
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 180px auto;
+    background-color: #F5F5F5;
+    border-radius: 40px;
+  }
+
+  .form-title {
+    width: 511px;  
+    margin: 40px auto 24px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    text-align: center;
+    color: #2B4C80;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    max-width: 387px;
+    margin: 0 auto;
+  }
+
+  .form-button {
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 500;
+    color: #FFFFFF;
+    background-color: #2B4C80;
+    padding: 20px 141px;
+    border: none;
+  }
+
+  input {
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #909090;
+    font-family: inherit; 
+    color: inherit;
+    background-color: transparent;
+    padding-top: 12px; 
+    margin-bottom: 20px;
+  }
+
+  input::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    color: #909090;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .agree-checkbox {
+    display: flex;
+    font-size: 14px;
+    font-weight: 400;
+    color: #909090;
+  }
+
+  .agree {
+
+  }
+  
+  .agree-link {
+    color: #000000;
+  }
+
+  .popup {
+    position: fixed;
+	  font-family: Arial, Helvetica, sans-serif;
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  background: rgba(0,0,0,0.8);
+	  z-index: 99999;
+	  -webkit-transition: opacity 400ms ease-in;
+	  -moz-transition: opacity 400ms ease-in;
+	  transition: opacity 400ms ease-in;
+	  display: none;
+	  pointer-events: none;
+  }
+
+  .popup:target {
+    display: block;
+	  pointer-events: auto;
+  }
+
+  .popup > div {
+    width: 800px;
+	  position: relative;
+	  margin: 10% auto;
+	  padding: 35px 20px 43px 20px;
+	  border-radius: 10px;
+	  background: #fff;
+  }
+
+  .text-agree {
+    max-height: 70vh;
+	  position: relative;
+	  overflow: hidden;
+	  overflow-y: scroll;
+	  padding-right: 15px;
+  }
+
+  .close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: 500px;
+    top: 170px;
+    text-align: center;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+  }
+
+  close:hover {
+    background: #00d9ff;
+   }
