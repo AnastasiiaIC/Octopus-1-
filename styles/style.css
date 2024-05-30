@@ -125,10 +125,16 @@ body {
     color: #292929;
   }
 
+  /*Стили для текста в карточках, подзаголовков слайдеров*/
   .advantages-second_card-text {
     font-size: 14px;
     line-height: 25.9px;
     color: #292929;
+  }
+
+  /*Стили для подзаголовков слайдеров, отступ от заголовка*/
+  .subtitle {
+    margin-top: 20px;
   }
 
   .delivery-set {
@@ -203,11 +209,18 @@ body {
     padding: 8px 0;
   }
 
+  /*стили для текста внутри маркированного списка*/
   .card-table_text {
     font-size: 14px;
     font-weight: 400;
     color: #292929;
     list-style-type: disc;
+  }
+
+  /*стили для стандартных маркеров списка, цвет и размер*/
+  .card-table_text li::marker {
+    color: #2B4C80;
+    font-size: 50%;
   }
 
   .bottom-card {
@@ -218,15 +231,65 @@ body {
 
   .button-for-consultation {
     margin: 40px auto;
-    padding: 15px;
+    padding: 15px ;
     width: 374px;
     background-color: #2B4C80;
     color: #FFFFFF;
     font-family: Monserrat, sans-serif;
     font-size: 16px;
     font-weight: 500;
+    border: none;   /*убирает "тень" под кнопкой*/
   }
 
+  /*стили для попап формы */
+  .popup-form {
+    position: fixed;
+    inset: 0;
+    top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  background: rgba(0,0,0,0.8);
+	  z-index: 99999;
+	  -webkit-transition: opacity 400ms ease-in;
+	  -moz-transition: opacity 400ms ease-in;
+	  transition: opacity 400ms ease-in;
+	  display: none; /*скрываем его, чтобы не было видно до клика */
+  }
+
+  .popup-container {
+    margin-top: 300px;
+    display: flex; 
+    flex-direction: column;
+    max-width: 600px;
+    margin: 180px auto;
+    background-color: #FFFFFF;
+  }
+
+  /*стили для крестика, закрывающего popup-форму*/
+  .close-form {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: 600px;
+    top: 150px;
+    text-align: center;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+  }
+
+  .close-form:hover {
+    background: #00d9ff; /*при наведении на крестик в попап-форме его фон меняется на голубой*/
+   }
+   
   .main-functions {
     display: flex;
     flex-direction: column;
@@ -245,7 +308,7 @@ body {
     margin-bottom: 60px;
   }
 
-  .octopus_slider-conteiner {
+  .octopus_slider-container {
     position: relative;
     width: 1200px;
     height: 679px;
@@ -253,14 +316,21 @@ body {
     overflow: hidden;
     touch-action: pan-y; /*Чтобы запретить скролл страницы, если мы начали двигать слайдер по оси X для сенсорных экранов*/
   }
-
-  .octopus_slaider-img {
+  .second_slider_class {
+    position: relative;
+    width: 780px;
+    height: 491px;
+    margin: 30px 0;
+    overflow: hidden;
+    touch-action: pan-y; /*Чтобы запретить скролл страницы, если мы начали двигать слайдер по оси X для сенсорных экранов*/
+  }
+  .octopus_slider-img {
     width: 100%;
     height: 100%;
     pointer-events: none; /* задаем изображениям , чтобы они не перетаскивались мышью */
   }
 
-  .octopus_slaider {
+  .octopus_slider {
     display: flex;
     flex-shrink: 0;
   }
@@ -275,17 +345,53 @@ body {
     cursor: pointer; /* меняем вид курсора*/
   }
 
-  .octopus_slider-conteiner-two {
-    position: relative;
-    width: 780px;
-    height: 491px;
-    margin: 30px 0;
-    overflow: hidden;
-    touch-action: pan-y; /*Чтобы запретить скролл страницы, если мы начали двигать слайдер по оси X для сенсорных экранов*/
+  /*стили для счетчиков и стрелок слайдеров*/
+  .counter_slides {
+    display: flex;
+    flex-direction: row;
+    max-width: 128px;
+  }
+
+  /*стили для счетчиков слайдеров (flex для выстраивания в одну строку, margin для отступов от стрелок*/
+  .counter-num {
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    margin: 0 auto;
+  }
+
+  /*стили для общего количества слайдов для каждого слайдера, цвет и расстояние до слэша */
+  #num_of_slides_1,
+  #num_of_slides_2,
+  #num_of_slides_3 {
+    color: #909090;
+    margin-left: 10px;
+  }
+
+  /*стили для активного счетчика слайдов для каждого слайдера, расстояние до слэша*/
+  #cur_slide_num_1,
+  #cur_slide_num_2,
+  #cur_slide_num_3 {
+    margin-right: 10px;
   }
 
   .advantages-second_title.newtitle {
     margin-top: 120px;
+  }
+
+  /*стили для блока ОКТОПУС ОАПС, нужно было отдельно, т.к мешались лишние отступы  */
+  .main-functions_Octopus-OAPS {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 150px auto; /*ТУТ НЕВЕРНО УКАЗАН ОТСТУП, НУЖНО ИСПРАВИТЬ*/
+  }
+
+  /*стили для блока ОКТОПУС ОАПС, т.к нужны были отступы по 30px*/
+  .main-functions_Octopus-OAPS_container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
   }
 
   .feedback-form {
@@ -325,7 +431,7 @@ body {
     border: none;
   }
 
-  input {
+  .input {
     height: 40px;
     border: none;
     border-bottom: 1px solid #909090;
@@ -346,23 +452,24 @@ body {
     display: none;
   }
 
+  /*стили для чекбокса, flex/psdding/margin нужны, т.к иначе сам чекбокс не в одной строке с текстом*/
   .agree-checkbox {
     display: flex;
     font-size: 14px;
     font-weight: 400;
     color: #909090;
-  }
-
-  .agree {
-
+    padding-top: 12px; 
+    margin-bottom: 20px;
   }
   
+  /*ссылка по умолчанию подсвечивалась фиолетовым*/
   .agree-link {
     color: #000000;
   }
 
   .popup {
     position: fixed;
+    inset: 0;
 	  font-family: Arial, Helvetica, sans-serif;
 	  top: 0;
 	  right: 0;
@@ -373,8 +480,7 @@ body {
 	  -webkit-transition: opacity 400ms ease-in;
 	  -moz-transition: opacity 400ms ease-in;
 	  transition: opacity 400ms ease-in;
-	  display: none;
-	  pointer-events: none;
+	  display: none; /*скрываем его, чтобы не было видно до клика */
   }
 
   .popup:target {
@@ -397,6 +503,7 @@ body {
 	  overflow: hidden;
 	  overflow-y: scroll;
 	  padding-right: 15px;
+    cursor: default; /*убираем курсор с содержимого попапа*/
   }
 
   .close {
@@ -418,6 +525,6 @@ body {
     box-shadow: 1px 1px 3px #000;
   }
 
-  close:hover {
+  .close:hover {
     background: #00d9ff;
    }

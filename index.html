@@ -6,7 +6,8 @@
   <title>Octopus</title>
   <link rel="stylesheet" href="./fonts/font.css" />
   <link rel="stylesheet" href="./styles/style.css" />
-  <script src="./scripts/script.js"></script>
+  <script src="./scripts/script.js" defer></script>
+  <script src="./scripts/popup-script.js" defer></script>
 </head>
 <body>
   <main>
@@ -95,7 +96,7 @@
         <li class="advantages-second_card">
           <p class="advantages-second_card-title">
             Программное обеспечение собственной разработки
-          </з>
+          </p>
           <p class="advantages-second_card-text">
             Возможность развития и поддержки продукта, внедрения дополнительных функций. Простая интеграция приборов и модулей систем СиР
           </p>
@@ -164,6 +165,8 @@
               <ul class="card-table_text">
                 <li>Панель управления (ПУ)</li>
                 <li>Приборы ввода-вывода (ПВВ)</li>
+                <li>Принтер АПС</li>
+                <li>Источник бесперебойного питания (ИБП)</li>
               </ul>
             </div> 
           </li>
@@ -188,6 +191,8 @@
               <ul class="card-table_text">
                 <li>Прибор управления ОАПС (ПУОАПС)</li>
                 <li>Панель АПС</li>
+                <li>Приборы контроля дееспособности персонала (ПКДП)</li>
+                <li>Приборы светозвукового оповещения (ПСЗО)</li>
               </ul>
             </div>
           </li>
@@ -203,14 +208,88 @@
               </p>
               <ul class="card-table_text">
                 <li>Датчики (измерители/преобразователи) давления, температуры, уровня</li>
+                <li>Приборы ПСЗО и ПКДП</li>
               </ul>
             </div> 
           </li>
         </ul>
       </div>
-      <button class="button-for-consultation" type="button" name="to get a consultation Octopus">
+      <button class="button-for-consultation" type="button" name="to get a consultation Octopus" onclick="openPopupForm()" >
         Получить консультацию
       </button>
+      <div class="popup-form">
+        <div class="popup-container">
+          <a href="#0" class="close-form" onclick="closePopupForm()">X</a>
+          <h2 class="form-title">
+            Оставьте Ваши контактные данные и мы свяжемся с Вами
+          </h2>
+          <form class="form" action="">
+            <label for="name" class="hidden">Имя</label>
+            <input type="text" class="input" name="name" placeholder="Имя" id="name" required>
+            <label for="telephone" class="hidden">Телефон</label>
+            <input type="tel" class="input" name="telephone" placeholder="Телефон" id="telephone" required>
+            <label for="email" class="hidden">Почта</label>
+            <input type="email" class="input" name="email" placeholder="Почта" id="email" >
+            <label for="agree" class="agree-checkbox">
+              <input type="checkbox" name="agree" id="agree" class="agree" required>Я согласен на обработку &nbsp;  
+                <a href="#0" onclick="openPopup()" class="agree-link"> Персональных данных</a>
+                <div class="popup"> 
+                  <a href="#0" onclick="closePopup()" class="close">X</a>
+                  <div class="text-agree">
+                    <h4>Согласие на обработку персональных данных</h4>
+                    <br>
+                    <p>
+                      Предоставляя свои персональные данные Пользователь даёт согласие на обработку, хранение и использование своих персональных данных на основании ФЗ № 152-ФЗ «О персональных данных» от 27.07.2006 г. в следующих целях: 
+                    </p>
+                    <br>
+                    <p>
+                      - Осуществление клиентской поддержки
+                      <br>
+                      - Получения Пользователем информации о маркетинговых событиях
+                      <br>
+                      - Проведения аудита и прочих внутренних исследований с целью повышения качества предоставляемых услуг. 
+                    </p>
+                    <br>
+                    <p>
+                      Под персональными данными подразумевается любая информация личного характера, позволяющая установить личность Пользователя/Покупателя такая как:
+                    </p>
+                    <br>
+                    <p>
+                      - Фамилия, Имя, Отчество
+                      <br> 
+                      - Контактный телефон
+                      <br>
+                      - Адрес электронной почты 
+                    </p>
+                    <br>
+                    <p>
+                      Персональные данные Пользователей хранятся исключительно на электронных носителях и обрабатываются с использованием автоматизированных систем, за исключением случаев, когда неавтоматизированная обработка персональных данных необходима в связи с исполнением требований законодательства. 
+                    </p>
+                    <br>
+                    <p>
+                      Компания обязуется не передавать полученные персональные данные третьим лицам, за исключением следующих случаев:
+                    </p>
+                    <br>
+                    <p>
+                      По запросам уполномоченных органов государственной власти РФ только по основаниям и в порядке, установленным законодательством РФ 
+                    </p>
+                    <br>
+                    <p>
+                      Стратегическим партнерам, которые работают с Компанией для предоставления продуктов и услуг, или тем из них, которые помогают Компании реализовывать продукты и услуги потребителям. Мы предоставляем третьим лицам минимальный объем персональных данных, необходимый только для оказания требуемой услуги или проведения необходимой транзакции.
+                    </p>
+                    <br>
+                    <p>
+                      Компания оставляет за собой право вносить изменения в одностороннем порядке в настоящие правила, при условии, что изменения не противоречат действующему законодательству РФ. Изменения условий настоящих правил вступают в силу после их публикации на Сайте.
+                    </p>
+                  </div>  
+                </div>
+            </label>
+            <button class="form-button" type="submit">
+              Отправить
+            </button>
+          </form>
+        </div>
+      </div>
     </section>
     <section class="main-functions">
       <h2 class="h2_title">
@@ -271,69 +350,87 @@
       <p class="advantages-second_title">
         Пользовательский интерфейс ПУ
       </p>
-      <p class="advantages-second_card-text">
+      <p class="advantages-second_card-text subtitle">
         Диагональ экрана 19 — 27”
       </p>
-      <div class="octopus_slider-conteiner">
-        <div class="octopus_slaider" id="first">
-          <img class="octopus_slaider-img" src="./images/Vector.svg" alt="Осушительная и балластная системы">
-          <img class="octopus_slaider-img" src="./images/Vector (1).svg" alt="Осушительная и балластная системы">
-          <img class="octopus_slaider-img" src="./images/Vector (2).svg" alt="Системы пожаротушения">
-          <img class="octopus_slaider-img" src="./images/Vector (3).svg" alt="Системы пожаротушения">
-          <img class="octopus_slaider-img" src="./images/Vector (4).svg" alt="Топливная система">
-          <img class="octopus_slaider-img" src="./images/Vector (5).svg" alt="Топливная система">
-          <img class="octopus_slaider-img" src="./images/Vector (6).svg" alt="Главный двигатель №1">
-          <img class="octopus_slaider-img" src="./images/Vector (7).svg" alt="Главный двигатель №1">
-          <img class="octopus_slaider-img" src="./images/Vector (8).svg" alt="Судовая электростанция">
-          <img class="octopus_slaider-img" src="./images/Vector (9).svg" alt="Судовая электростанция">
-          <img class="octopus_slaider-img" src="./images/Vector (10).svg" alt="Прочие системы">
-          <img class="octopus_slaider-img" src="./images/Vector (11).svg" alt="Прочие системы">
-          <img class="octopus_slaider-img" src="./images/Vector (12).svg" alt="Диагностика ИСУ ТС и ОАПС">
-          <img class="octopus_slaider-img" src="./images/Vector (13).svg" alt="Диагностика ИСУ ТС и ОАПС">
-          <img class="octopus_slaider-img" src="./images/Vector (14).svg" alt="Список сигналов">
-          <img class="octopus_slaider-img" src="./images/Vector (15).svg" alt="Список сигналов">
-          <img class="octopus_slaider-img" src="./images/Vector (16).svg" alt="Журнал АПС">
-          <img class="octopus_slaider-img" src="./images/Vector (17).svg" alt="Журнал АПС">
+      <div class="octopus_slider-container first_slider_class">
+        <div class="octopus_slider" id="first">
+          <img class="octopus_slider-img" src="./images/Vector.svg" alt="Осушительная и балластная системы">
+          <img class="octopus_slider-img" src="./images/Vector (1).svg" alt="Осушительная и балластная системы">
+          <img class="octopus_slider-img" src="./images/Vector (2).svg" alt="Системы пожаротушения">
+          <img class="octopus_slider-img" src="./images/Vector (3).svg" alt="Системы пожаротушения">
+          <img class="octopus_slider-img" src="./images/Vector (4).svg" alt="Топливная система">
+          <img class="octopus_slider-img" src="./images/Vector (5).svg" alt="Топливная система">
+          <img class="octopus_slider-img" src="./images/Vector (6).svg" alt="Главный двигатель №1">
+          <img class="octopus_slider-img" src="./images/Vector (7).svg" alt="Главный двигатель №1">
+          <img class="octopus_slider-img" src="./images/Vector (8).svg" alt="Судовая электростанция">
+          <img class="octopus_slider-img" src="./images/Vector (9).svg" alt="Судовая электростанция">
+          <img class="octopus_slider-img" src="./images/Vector (10).svg" alt="Прочие системы">
+          <img class="octopus_slider-img" src="./images/Vector (11).svg" alt="Прочие системы">
+          <img class="octopus_slider-img" src="./images/Vector (12).svg" alt="Диагностика ИСУ ТС и ОАПС">
+          <img class="octopus_slider-img" src="./images/Vector (13).svg" alt="Диагностика ИСУ ТС и ОАПС">
+          <img class="octopus_slider-img" src="./images/Vector (14).svg" alt="Список сигналов">
+          <img class="octopus_slider-img" src="./images/Vector (15).svg" alt="Список сигналов">
+          <img class="octopus_slider-img" src="./images/Vector (16).svg" alt="Журнал АПС">
+          <img class="octopus_slider-img" src="./images/Vector (17).svg" alt="Журнал АПС">
         </div>
       </div>
-      <button class="prev-button prev-button-one" aria-label="Посмотреть предыдущий слайд">&lt;</button>
-      <button class="next-button next-button-one" aria-label="Посмотреть следующий слайд">&gt;</button>
-      <p class="advantages-second_card-text">
+      <div class="counter_slides">
+        <button class="prev-button prev-button-one" aria-label="Посмотреть предыдущий слайд">
+          <img src="./images/Left arrow.svg" alt="Стрелка влево">
+        </button>
+        <div class="counter-num">
+          <div id="cur_slide_num_1">1</div> / <div id="num_of_slides_1"></div>
+        </div>
+        <button class="next-button next-button-one" aria-label="Посмотреть следующий слайд">
+          <img src="./images/Right arrow.svg" alt="Стрелка вправо">
+        </button>
+      </div>
+      <p class="advantages-second_card-text subtitle">
         Диагональ экрана 10”
       </p>
-      <div class="octopus_slider-conteiner_2 octopus_slider-conteiner-two">
-        <div class="octopus_slaider" id="second">
-          <img class="octopus_slaider-img" src="./images/Rectangle.svg" alt="Топливная система">
-          <img class="octopus_slaider-img" src="./images/Rectangle (1).svg" alt="Топливная система">
-          <img class="octopus_slaider-img" src="./images/Rectangle (2).svg" alt="Топливная система">
-          <img class="octopus_slaider-img" src="./images/Rectangle (3).svg" alt="Топливная система">
-          <img class="octopus_slaider-img" src="./images/Rectangle (4).svg" alt="Топливная система">
-          <img class="octopus_slaider-img" src="./images/Rectangle (5).svg" alt="Топливная система">
-          <img class="octopus_slaider-img" src="./images/Rectangle (6).svg" alt="Главный двигатель №1">
-          <img class="octopus_slaider-img" src="./images/Rectangle (7).svg" alt="Журнал АПС">
-          <img class="octopus_slaider-img" src="./images/Rectangle (8).svg" alt="Журнал АПС">
-          <img class="octopus_slaider-img" src="./images/Rectangle (9).svg" alt="Главный двигатель №1">
-          <img class="octopus_slaider-img" src="./images/Rectangle (10).svg" alt="Главный двигатель №1">
-          <img class="octopus_slaider-img" src="./images/Rectangle (11).svg" alt="Главный двигатель №1">
-          <img class="octopus_slaider-img" src="./images/Rectangle (12).svg" alt="Главный двигатель №1">
-          <img class="octopus_slaider-img" src="./images/Rectangle (13).svg" alt="Список сигнало">
-          <img class="octopus_slaider-img" src="./images/Rectangle (14).svg" alt="Список сигналов">
-          <img class="octopus_slaider-img" src="./images/Rectangle (15).svg" alt="Журнал АПС">
-          <img class="octopus_slaider-img" src="./images/Rectangle (16).svg" alt="Журнал АПС">
+      <div class="octopus_slider-container second_slider_class">
+        <div class="octopus_slider" id = "second">
+          <img class="octopus_slider-img" src="./images/Rectangle.svg" alt="Топливная система">
+          <img class="octopus_slider-img" src="./images/Rectangle (1).svg" alt="Топливная система">
+          <img class="octopus_slider-img" src="./images/Rectangle (2).svg" alt="Топливная система">
+          <img class="octopus_slider-img" src="./images/Rectangle (3).svg" alt="Топливная система">
+          <img class="octopus_slider-img" src="./images/Rectangle (4).svg" alt="Топливная система">
+          <img class="octopus_slider-img" src="./images/Rectangle (5).svg" alt="Топливная система">
+          <img class="octopus_slider-img" src="./images/Rectangle (6).svg" alt="Главный двигатель №1">
+          <img class="octopus_slider-img" src="./images/Rectangle (7).svg" alt="Журнал АПС">
+          <img class="octopus_slider-img" src="./images/Rectangle (8).svg" alt="Журнал АПС">
+          <img class="octopus_slider-img" src="./images/Rectangle (9).svg" alt="Главный двигатель №1">
+          <img class="octopus_slider-img" src="./images/Rectangle (10).svg" alt="Главный двигатель №1">
+          <img class="octopus_slider-img" src="./images/Rectangle (11).svg" alt="Главный двигатель №1">
+          <img class="octopus_slider-img" src="./images/Rectangle (12).svg" alt="Главный двигатель №1">
+          <img class="octopus_slider-img" src="./images/Rectangle (13).svg" alt="Список сигнало">
+          <img class="octopus_slider-img" src="./images/Rectangle (14).svg" alt="Список сигналов">
+          <img class="octopus_slider-img" src="./images/Rectangle (15).svg" alt="Журнал АПС">
+          <img class="octopus_slider-img" src="./images/Rectangle (16).svg" alt="Журнал АПС">
         </div>
       </div>
-      <button class="prev-button prev-button-two" aria-label="Посмотреть предыдущий слайд">&lt;</button>
-      <button class="next-button next-button-two" aria-label="Посмотреть следующий слайд">&gt;</button>
-      <script src="./scripts/script.js"></script>
+      <div class="counter_slides">
+        <button class="prev-button prev-button-two" aria-label="Посмотреть предыдущий слайд">
+          <img src="./images/Left arrow.svg" alt="Стрелка влево">
+        </button>
+        <div class="counter-num">
+          <div id="cur_slide_num_2">1</div> / <div id="num_of_slides_2"></div>
+        </div>
+        <button class="next-button next-button-two" aria-label="Посмотреть следующий слайд">
+          <img src="./images/Right arrow.svg" alt="Стрелка вправо">
+        </button>
+      </div>
     </section>
-    <section class="main-functions">
-      <h2 class="h2_title">
-        OCTOPUS ОАПС
-      </h2>
-      <p class="advantages-second_title">
-        Основные функции
-      </p>
-      <ul class="advantages-second_card-list">
+    <section class="main-functions_Octopus-OAPS">
+      <div class="main-functions_Octopus-OAPS_container">
+        <h2 class="h2_title">
+          OCTOPUS ОАПС
+        </h2>
+        <p class="advantages-second_title">
+          Основные функции
+        </p>
+        <ul class="advantages-second_card-list">
         <li class="advantages-second_card">
           <p class="advantages-second_card-text">
             <span class="text_bold">Формирование сигналов ОАПС</span>  по данным от ИСУ ТС
@@ -364,22 +461,30 @@
             <span class="text_bold">Хранение журнала АПС</span>
           </p>
         </li>
-      </ul>  
+        </ul>  
+      </div>
       <p class="advantages-second_title newtitle">
         Пользовательский интерфейс панели ОАПС
       </p>
-      <p class="advantages-second_card-text">
+      <p class="advantages-second_card-text subtitle subtitle-exception ">
         Диагональ экрана 10”
       </p>
-      <div class="octopus_slider-conteiner octopus_slider-conteiner-two">
-        <div class="octopus_slaider" id="third">
-          <img class="octopus_slaider-img" src="./images/Rectangle..svg" alt="Осушительная и балластная системы">
-          <img class="octopus_slaider-img" src="./images/Rectangle (1.).svg" alt="Осушительная и балластная системы">
+      <div class="octopus_slider-container second_slider_class">
+        <div class="octopus_slider" id="third">
+          <img class="octopus_slider-img" src="./images/Rectangle..svg" alt="Осушительная и балластная системы">
+          <img class="octopus_slider-img" src="./images/Rectangle (1.).svg" alt="Осушительная и балластная системы">
         </div>
       </div>
-      <div>
-        <button class="prev-button" aria-label="Посмотреть предыдущий слайд">&lt;</button>
-        <button class="next-button" aria-label="Посмотреть следующий слайд">&gt;</button>
+      <div class="counter_slides">  
+        <button class="prev-button prev-button-third" aria-label="Посмотреть предыдущий слайд">
+          <img src="./images/Left arrow.svg" alt="Стрелка влево">
+        </button>
+        <div class="counter-num">
+          <div id="cur_slide_num_3">1</div> / <div id="num_of_slides_3"></div>
+        </div>
+        <button class="next-button next-button-third" aria-label="Посмотреть следующий слайд">
+          <img src="./images/Right arrow.svg" alt="Стрелка вправо">
+        </button>
       </div>
     </section>  
     <section class="feedback-form">
@@ -388,16 +493,15 @@
       </h2>
       <form class="form" action="">
         <label for="name" class="hidden">Имя</label>
-        <input type="text" name="name" placeholder="Имя" id="name" required>
+        <input type="text" class="input" name="name" placeholder="Имя" id="name" required>
         <label for="telephone" class="hidden">Телефон</label>
-        <input type="tel" name="telephone" placeholder="Телефон" id="telephone" required>
+        <input type="tel" class="input" name="telephone" placeholder="Телефон" id="telephone" required>
         <label for="email" class="hidden">Почта</label>
-        <input type="email" name="email" placeholder="Почта" id="email" >
+        <input type="email" class="input" name="email" placeholder="Почта" id="email" >
         <label for="agree" class="agree-checkbox">
-          <input type="checkbox" name="agree" id="agree" class="agree" required>Я согласен на обработку 
+          <input type="checkbox" name="agree" id="agree" class="agree" required>Я согласен на обработку &nbsp;
             <a href="#0" onclick="openPopup()" class="agree-link">Персональных данных</a>
-            <div class="popup"> 
-              <a href="#0" onclick="closePopup()" class="close">X</a>
+            <div class="popup">   
               <div class="text-agree">
                 <h4>Согласие на обработку персональных данных</h4>
                 <br>
@@ -445,6 +549,7 @@
                   Компания оставляет за собой право вносить изменения в одностороннем порядке в настоящие правила, при условии, что изменения не противоречат действующему законодательству РФ. Изменения условий настоящих правил вступают в силу после их публикации на Сайте.
                 </p>
               </div>  
+              <a href="#0" onclick="closePopup()" class="close">X</a>
             </div>
         </label>
         <button class="form-button" type="submit">
